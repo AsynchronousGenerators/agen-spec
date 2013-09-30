@@ -52,8 +52,8 @@ A generator may only `yield` on 1 of 4 types:
 
 1. asynchrony
 	- Ex. `yield asynchrony`
-1. generator
-	- Ex. `yield* function*(){}`
+1. generator objects
+	- Ex. `yield* (function*(){})()`
 1. array of asynchrony and/or generators
 	- Ex. `yield [function*(){}, asynchrony]`
     - All elements must run in parallel.

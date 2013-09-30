@@ -1,0 +1,33 @@
+{
+  "name": "agen",
+  "version": "0.3.0",
+  "description": "An open standard for interoperable ES6 generators",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/AsynchronousGenerators/agen.git",
+  "main": "index",
+  "homepage": "https://github.com/AsynchronousGenerators/agen",
+  "contributors": [
+    {
+      "name": "Raynos"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/AsynchronousGenerators/agen/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~1.1.1",
+    "gens": "~0.4.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/AsynchronousGenerators/agen/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "node --harmony ./test/index.js"
+  }
+}

@@ -66,7 +66,7 @@ Implementations must pass yield values from yield primitive to `generator.send()
 The yield values for the corresponding yield primitives should be,
 
 1. asynchrony - The value as specified by the corresponding asynchrony specification.
-1. generator - The return value.
+1. generator object - The return value of the generator function.
 1. array - An array of the preceding yield primitives' values with order maintained.
 1. object - [See Yield Objects] 
 

@@ -137,3 +137,8 @@ Long answer: Node.js error handling is necessarily different from browser error 
 * node.js is highly asynchronous, even internally
 * Because of the above, uncaught exceptions in application code prevent the core call stack from unwinding, placing it into an [undefined](nodejs.org/docs/latest/api/domain.html#domain_warning_don_t_ignore_errors) [state](https://github.com/joyent/node/issues/5149), requiring a restart of the process
 * The required restart on uncaught exception is a DoS liability, and must therefore be mitigated by leaving exceptions for truly exceptional circumstances
+
+**Why not explicitly support Promises A+ and Continuables?**
+Because there's no real need or benefit to adopting a whitelist of supported Asynchrony.
+
+If the list of community supported Asynchrony grows to be large, then the spec and implementation becomes cumbersome, and if the list is small, then supporting additional types and finding compatible implementations becomes trivial. If all current potential AGen implementations already support promises and continuables, it's a moot point.

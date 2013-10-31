@@ -139,6 +139,9 @@ Long answer: Node.js error handling is necessarily different from browser error 
 * The required restart on uncaught exception is a DoS liability, and must therefore be mitigated by leaving exceptions for truly exceptional circumstances
 
 **Why not explicitly support Promises A+ and Continuables?**
+
 Because there's no real need or benefit to adopting a whitelist of supported Asynchrony.
 
-If the list of community supported Asynchrony grows to be large, then the spec and implementation becomes cumbersome, and if the list is small, then supporting additional types and finding compatible implementations becomes trivial. If all current potential AGen implementations already support promises and continuables, it's a moot point.
+If the list of community supported Asynchrony grows to be large, then the spec and implementation becomes cumbersome, and if the list is small, then supporting additional types and finding compatible implementations becomes trivial.
+
+If all current potential AGen implementations already support promises and continuables, it's a moot point.

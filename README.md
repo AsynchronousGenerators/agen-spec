@@ -124,6 +124,16 @@ Yielding on an object is a special case intended to allow for implementation to 
     1. The implementation must choose how to handle the object.
   1. Otherwise, the parent generator should return an error.
 
-## Notes
+## FAQ
 
-None.
+**Why separate Errors and Exceptions?**
+
+Short answer: node.js.
+
+Long answer: Node.js error handling is necessarily different from browser error handling for the following reasons:
+
+* node.js core shares the same call stack as application code
+* node.js core always executes at the top of all call stacks
+* node.js is highly asynchronous, even internally
+* Because of the above, uncaught exceptions in application code prevent the core call stack from unwinding, placing it into an [undefined](nodejs.org/docs/latest/api/domain.html#domain_warning_don_t_ignore_errors) [state](https://github.com/joyent/node/issues/5149), requiring a restart of the process
+* The required restart on uncaught exception is a DoS liability, and must therefore be mitigated by leaving exceptions for truly exceptional circumstances
